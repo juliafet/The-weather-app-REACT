@@ -21,14 +21,16 @@ export default class App extends React.Component {
       const city = e.target.elements.city.value
 
       if(city) {
-        const api_url = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+        const api_url = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`)
         const data = await api_url.json()
         console.log(data)
 
         let sunset = data.sys.sunset
         let date = new Date()
-        date.setTime(sunset)
-        let sunset_date = date.getHours() + ":" + date.getMinutes() + ":" +date.getSeconds()
+        console.log(date)
+        date.getTime(sunset)
+        console.log(date)
+        let sunset_date = date.getHours() + ": " + date.getMinutes() + ": " + date.getSeconds()
 
         this.setState({
           temp: data.main.temp,
@@ -58,10 +60,10 @@ export default class App extends React.Component {
         <div className="main">
         <div className="container">
           <div className="row">
-          <div className="col-xs-5">
+          <div className="col-sm-5 info">
             <Info />
           </div>
-          <div className="col-xs-7">
+          <div className="col-sm-7 form">
             <Form weatherMethod={this.gettingWeather} />
             <Weather 
               temp={this.state.temp}

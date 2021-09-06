@@ -21,3 +21,87 @@ body {
   width: 60%;
   margin: 0 auto;
 }
+
+.info {
+  height: 55vh;
+  background: url("img/nature_1.jpg") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.form {
+  height: 55vh;
+  padding-top: 100px;
+  padding-left: 150px;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px #113a65;
+  width: 50%;
+  padding-bottom: 4px;
+  color: #fff;
+  font-weight: lighter;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  font-size: 20px;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #d9e9fa;
+}
+
+input::-moz-placeholder {
+  color: #103a65;
+}
+
+button {
+  border: 2px solid #103a65;
+  border-bottom: 4px solid #103a65;
+  padding: 8px 20px;
+  margin: 0 2px;
+  cursor: pointer;
+  background-color: #235d9c;
+  color: #fff;
+  outline: none !important;
+}
+
+button:hover {
+  border-bottom: 2px solid #103a65;
+  position: relative;
+  top: 2px;
+}
+
+button:active {
+  border-bottom: 2px solid transparent;
+  border-color: transparent;
+  position: relative;
+  top: 2px;
+}
+
+.info h2 {
+  font-size: 2em;
+  color: white;
+}
+
+.info p {
+  font-weight: bold;
+  color: #e4e4e4;
+}
+
+.infoWeath {
+  width: 60%;
+  font-size: 20px;
+  color: #fff;
+}
+
+.error {
+  color: #f75090;
+  font-weight: bold;
+}

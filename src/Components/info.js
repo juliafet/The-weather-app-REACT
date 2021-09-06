@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Info = () => (
-    <div>The Weather App - Info</div>
+    <div>
+        <h2>The Weather App</h2>
+    </div>
 )
 
 export default Info
