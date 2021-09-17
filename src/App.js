@@ -3,15 +3,14 @@ import Info from "./Components/info"
 import Form from "./Components/form"
 import Weather from "./Components/weather"
 
-const API_KEY = ""
-
+const API_KEY = "95e86e24254bb4c4bdf4acbb6ac7a5aa"
 export default class App extends React.Component {
 
   state = {
     temp: undefined,
     city: undefined,
     country: undefined,
-    pressure: undefined,
+    clouds: undefined,
     sunset: undefined,
     error: undefined
   }
@@ -27,16 +26,14 @@ export default class App extends React.Component {
 
         let sunset = data.sys.sunset
         let date = new Date()
-        console.log(date)
         date.getTime(sunset)
-        console.log(date)
-        let sunset_date = date.getHours() + ": " + date.getMinutes() + ": " + date.getSeconds()
+        let sunset_date = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
 
         this.setState({
           temp: data.main.temp,
           city: data.name,
           country: data.sys.country,
-          pressure: data.main.pressure,
+          clouds: data.clouds.all,
           sunset: sunset_date,
           error: undefined
       })
@@ -45,13 +42,12 @@ export default class App extends React.Component {
           temp: undefined,
           city: undefined,
           country: undefined,
-          pressure: undefined,
+          clouds: undefined,
           sunset: undefined,
           error: "Enter the City"
         })
         
       }
-      
   }
 
   render() {
@@ -69,7 +65,7 @@ export default class App extends React.Component {
               temp={this.state.temp}
               city={this.state.city}
               country={this.state.country}
-              pressure={this.state.pressure}
+              clouds={this.state.clouds}
               sunset={this.state.sunset}
               error={this.state.error}
             />
@@ -77,7 +73,6 @@ export default class App extends React.Component {
         </div>
         </div>
         </div>
-        
       </div>
     )
   }
