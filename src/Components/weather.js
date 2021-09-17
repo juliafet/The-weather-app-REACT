@@ -4,8 +4,8 @@ const Weather = (props) => (
         <div className="infoWeath">
                 { props.city && 
                     <div>
-                        <p>Location: {props.city},  {props.country}</p>
-                        <p>Temperature: {props.temp} °C</p>
+                        <p>{props.city},  {props.country}</p>
+                        <p>{props.temp} °C</p>
                         <p>Pressure: {props.pressure} hPa</p>
                         <p>Sunset: {props.sunset}</p>
                     </div>

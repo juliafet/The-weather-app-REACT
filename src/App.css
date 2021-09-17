@@ -34,9 +34,13 @@ body {
 }
 
 .form {
+  margin-bottom: 10px;
+  line-height: 0.8;
   height: 55vh;
-  padding-top: 100px;
-  padding-left: 150px;
+  padding: 20px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 input[type="text"] {
@@ -47,9 +51,10 @@ input[type="text"] {
   padding-bottom: 4px;
   color: #fff;
   font-weight: lighter;
-  margin-bottom: 30px;
-  margin-right: 20px;
-  font-size: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 18px;
   outline: none;
 }
 
@@ -57,19 +62,18 @@ input::-webkit-input-placeholder {
   color: #d9e9fa;
 }
 
-input::-moz-placeholder {
-  color: #103a65;
-}
-
 button {
   border: 2px solid #103a65;
   border-bottom: 4px solid #103a65;
   padding: 8px 20px;
-  margin: 0 2px;
   cursor: pointer;
   background-color: #235d9c;
   color: #fff;
   outline: none !important;
+}
+
+form button {
+  margin: 10px;
 }
 
 button:hover {
@@ -96,9 +100,11 @@ button:active {
 }
 
 .infoWeath {
+  text-align: center;
   width: 60%;
   font-size: 20px;
   color: #fff;
+  margin-right: 10px;
 }
 
 .error {
